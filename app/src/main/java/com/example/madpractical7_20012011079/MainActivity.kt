@@ -13,17 +13,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var alarmbutton=findViewById<Button>(R.id.alrmbtn1)
         alarmbutton.setOnClickListener{
-            showTimeDilog()
+            showTimeDialog()
         }
     }
-    private fun showTimeDilog(){
-        var calendar:Calendar=Calendar.getInstance()
-        var hour:Int=calendar.get(Calendar.HOUR_OF_DAY)
-        var minute:Int=calendar.get(Calendar.MINUTE)
-//        val picker=TimePickerDialog(this{
-//            tp,sHour,sMinute ->sendDialogToActivity(sHour,sMinute) },
-//        hour, min,false
-//            )
-//        picker.show()
-        }
+    fun showTimeDialog()
+    {
+        val cldr: Calendar = Calendar.getInstance()
+        val hour: Int = cldr.get(Calendar.HOUR_OF_DAY)
+        val minutes: Int = cldr.get(Calendar.MINUTE)
+        val picker = TimePickerDialog(
+            this,
+            { tp, sHour, sMinute -> sendDialogDataToActivity(sHour, sMinute) },
+            hour,
+            minutes,
+            false
+        )
+        picker.show()
     }
+
+
+}
