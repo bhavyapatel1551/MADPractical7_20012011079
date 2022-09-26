@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import java.util.*
+import kotlin.math.min
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,12 +14,16 @@ class MainActivity : AppCompatActivity() {
         var alarmbutton=findViewById<Button>(R.id.alrmbtn1)
         alarmbutton.setOnClickListener{
             showTimeDilog()
-
         }
     }
     private fun showTimeDilog(){
         var calendar:Calendar=Calendar.getInstance()
         var hour:Int=calendar.get(Calendar.HOUR_OF_DAY)
         var minute:Int=calendar.get(Calendar.MINUTE)
+//        val picker=TimePickerDialog(this{
+//            tp,sHour,sMinute ->sendDialogToActivity(sHour,sMinute) },
+//        hour, min,false
+//            )
+//        picker.show()
         }
     }
