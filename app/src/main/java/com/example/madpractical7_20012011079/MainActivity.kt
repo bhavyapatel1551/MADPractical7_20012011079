@@ -33,9 +33,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun sendDialogDataToActivity(sHour: Int, sMinute: Int) {
         val alarmCalendar=Calendar.getInstance()
+        val year:Int=alarmCalendar.get(Calendar.YEAR)
         val month:Int=alarmCalendar.get(Calendar.MONTH)
         val day:Int=alarmCalendar.get(Calendar.DATE)
-        alarmCalendar.set()
+        alarmCalendar.set(year,month,day,sHour,sMinute,0)
+
+
+
 
     }
 

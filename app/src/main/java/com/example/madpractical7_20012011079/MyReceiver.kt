@@ -7,7 +7,17 @@ import android.content.Intent
 class MyReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
-        TODO("MyReceiver.onReceive() is not implemented")
+       val str1=intent.getStringExtra("Service1")
+        if(str1=="start" || str1=="Stop"){
+            val intentService=Intent(context,AlarmService::class.java)
+            intentService.putExtra("Service1",intent.getStringExtra("Service1"))
+            if(str1=="start"){
+                context.startService(intentService)
+            }
+            else if(str1=="Stop")
+            {
+                context.startService(intentService)
+            }
+        }
     }
 }
