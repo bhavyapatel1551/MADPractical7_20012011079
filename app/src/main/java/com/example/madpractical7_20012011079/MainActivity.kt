@@ -45,10 +45,7 @@ class MainActivity : AppCompatActivity() {
     private fun setAlarm(millisTime: Long, str: String) {
         val intent = Intent(this, MyReceiver::class.java)
         intent.putExtra("Service1", str)
-        val pendingIntent = PendingIntent.getBroadcast()
     }
 }
 
 
-
-}
