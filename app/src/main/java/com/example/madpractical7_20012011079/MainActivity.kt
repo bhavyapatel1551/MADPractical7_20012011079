@@ -31,5 +31,13 @@ class MainActivity : AppCompatActivity() {
         picker.show()
     }
 
+    private fun sendDialogDataToActivity(sHour: Int, sMinute: Int) {
+        val alarmCalendar=Calendar.getInstance()
+        val month:Int=alarmCalendar.get(Calendar.MONTH)
+        val day:Int=alarmCalendar.get(Calendar.DATE)
+        alarmCalendar.set()
+
+    }
+
 
 }
